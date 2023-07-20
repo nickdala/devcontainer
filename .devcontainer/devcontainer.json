@@ -4,15 +4,15 @@
 	// Option 1: AZ CLI is correctly installed using this image 
 	//"image": "mcr.microsoft.com/vscode/devcontainers/base:0-focal",
 
-	// Option 2: AZ CLI is not installed using this image.  Looks like the install silently fails
+	// Option 2: AZ CLI is not installed using the following image for arm64/Apple Silicon.
 	//"image": "mcr.microsoft.com/vscode/devcontainers/base:0-jammy",
 
-	// Option 3: AZ CLI is not installed using a Docker file.  There is an error creating the container.
+	// Option 3: AZ CLI is not installed using a Docker file with Ubuntu version: jammy / ubuntu-22.04 for arm64/Apple Silicon..
 	"build": {
 		"dockerfile": "Dockerfile",
 		// Ubuntu version: jammy / ubuntu-22.04 for arm64/Apple Silicon.
 		"args": {
-			"VARIANT": "ubuntu-22.04"
+			"VARIANT": "jammy"
 			//"VARIANT": "focal"
 		}
 	},
